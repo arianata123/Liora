@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Stunting Puskesmas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #126412;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('banner.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .cta {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .program-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .program-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .program-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Puskesmas">
+            <h1>Program Stunting Puskesmas</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Cegah Stunting, Wujudkan Masa Depan Sehat</h2>
+        <p>Bersama Puskesmas, kita berupaya mengatasi dan mencegah stunting untuk generasi yang lebih baik.</p>
+        <a href="#program" class="cta">Pelajari Program</a>
+    </section>
+    <section id="tentang" class="section">
+        <h2>Apa Itu Stunting?</h2>
+        <p>Stunting adalah kondisi gagal tumbuh akibat kekurangan gizi kronis yang berdampak pada perkembangan fisik dan kognitif anak.</p>
+    </section>
+    <section id="program" class="section">
+        <h2>Program Pencegahan Stunting</h2>
+        <div class="program-container">
+            <div class="program-card">
+                <img src="gizi.jpg" alt="Edukasi Gizi">
+                <h3>Edukasi Gizi</h3>
+                <p>Penyuluhan tentang pentingnya gizi seimbang untuk ibu hamil dan anak.</p>
+            </div>
+            <div class="program-card">
+                <img src="posyandu.jpg" alt="Pemeriksaan Posyandu">
+                <h3>Pemeriksaan Posyandu</h3>
+                <p>Pemantauan pertumbuhan dan perkembangan anak secara rutin.</p>
+            </div>
+            <div class="program-card">
+                <img src="makanan.jpg" alt="Bantuan Makanan">
+                <h3>Bantuan Makanan Sehat</h3>
+                <p>Pemberian makanan tambahan bergizi bagi anak berisiko stunting.</p>
+            </div>
+        </div>
+    </section>
+    <section id="kontak" class="section">
+        <h2>Hubungi Kami</h2>
+        <p>Jika Anda memiliki pertanyaan atau ingin berpartisipasi dalam program ini, hubungi kami melalui kontak berikut.</p>
+        <p>Email: info@puskesmas.com | Telepon: 0812-3456-7890</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Puskesmas - Program Pencegahan Stunting</p>
+    </footer>
+</body>
+</html>

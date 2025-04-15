@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cegah Stunting Sejak Dini</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #126412;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('1447056.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h2 {
+            margin-top: 50px;
+        }
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(18, 100, 18, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 40px 20px;
+            position: relative;
+            color: white;
+            gap: 20px; /* Added to create space between text and image */
+        }
+        .info-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(128, 128, 128, 0.5);
+            border-radius: 10px;
+        }
+        .info-text {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+            text-align: justify;
+            width: 40%;
+        }
+        .info-text h2 {
+            color: #fff;
+            font-size: 1.8em;
+        }
+        .info-text p {
+            font-size: 1.25em;
+        }
+        .info-section img {
+            max-width: 50%;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        .btn-green {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .cards-section {
+            text-align: center;
+            margin: 40px 20px;
+        }
+        .cards-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #126412;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card h4 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .recipe-section {
+            text-align: center;
+            margin: 40px 20px;
+        }
+        .recipe-slider-container {
+            position: relative;
+            overflow: hidden;
+            max-width: 100%;
+            width: 1100px;
+            margin: auto;
+        }
+        .recipe-slider {
+            display: flex;
+            width: 2200px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .recipe-card {
+            background: white;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+            .recipe-card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 1.5em;
+        }
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images-removebg-preview (4).png" alt="Logo UPTD Puskesmas">
+            <h1>Cegah Stunting Sejak Dini</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="stuntinggg.html">Tentang Stunting</a></li>
+                <li><a href="#program">Program & Kegiatan</a></li>
+                <li><a href="artikel dan edukasi.html">Artikel & Edukasi</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="beranda" class="hero">
+        <h2>Bersama Cegah Stunting, Wujudkan Generasi Emas Indonesia!</h2>
+    </section>
+    <section class="info-section">
+        <div class="info-text">
+            <h2>Apa itu Stunting?</h2>
+            <p>Stunting sering disebut sebagai kerdil atau pendek adalah kondisi gagal tumbuh pada anak berusia kurang dari 5 tahun (balita) akibat kekurangan gizi kronis dan infeksi berulang terutama pada periode 1.000 Hari Pertama Kehidupan (HPK), yaitu dari janin hingga anak berusia 23 bulan. Anak tergolong stunting apabila panjang atau tinggi badannya berada di bawah garis merah (– 2 SD) pada kurva pertumbuhan WHO.</p>
+            <a href="stuntinggg.html" class="btn-green">Pelajari lebih lanjut</a>
+        </div>
+        <img src="stuntinganak.jpeg" alt="Anak Stunting">
+    </section>
+    <section class="recipe-section">
+        <h2>Resep MPASI</h2>
+        <div class="recipe-slider-container">
+            <button class="slider-button prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="recipe-slider" id="slider">
+                    <a href="Resep 1.html" class="recipe-card">
+                        <img src="resepsatu.jpg" alt="Bubur Ikan Tenggiri">
+                        Bubur Ikan Tenggiri
+                    </a>
+                <div class="recipe-slider" id="slider">
+                    <a href="Resep 2.html" class="recipe-card">
+                        <img src="resepdua.jpg" alt="Bubur Ikan Kakap tempe">
+                        Bubur Ikan Kakap Tempe
+                    </a>
+                </div>
+                <div class="recipe-slider" id="slider">
+                    <a href="Resep 3.html" class="recipe-card">
+                        <img src="reseptiga.jpg" alt="Bubur Pepes Ikan Kembung">
+                        Bubur Pepes Ikan Kembung
+                    </a>
+                </div>
+                <div class="recipe-slider" id="slider">
+                    <a href="Resep 4.html" class="recipe-card">
+                        <img src="resepempat.jpg" alt="Tim Cah Ikan Kembung">
+                        Tim Cah Ikan Kembung
+                    </a>
+                </div>
+                <div class="recipe-slider" id="slider">
+                    <a href="Resep 5.html" class="recipe-card">
+                        <img src="reseplima.jpg" alt="Tim Ikan Tongkol">
+                        Tim Ikan Tongkol
+                    </a>
+                </div>
+                <div class="recipe-slider" id="slider">
+                    <a href="Resep 6.html" class="recipe-card">
+                        <img src="resepenam.jpg" alt="Tim Kentang Telur">
+                        Tim Kentang Telur
+                    </a>
+                </div>
+                <div class="recipe-slider" id="slider">
+                    <a href="Resep 7.html" class="recipe-card">
+                        <img src="reseptujuh.jpg" alt="Nasi Telur Campur">
+                        Nasi Telur Campur
+                    </a>
+                </div>
+                <div class="recipe-slider" id="slider">
+                    <a href="Resep 8.html" class="recipe-card">
+                        <img src="resepdelapan.jpg" alt="Mie Goreng Telur Puyuh">
+                        Mie Goreng Telur Puyuh
+                    </a>
+                </div>
+                <div class="recipe-slider" id="slider">
+                    <a href="Resep 9.html" class="recipe-card">
+                        <img src="resepsembilan.jpg" alt="Nasi Rendang Telur Tempe">
+                        Nasi Rendang Telur Tempe
+                    </a>
+                </div>
+                <div class="recipe-slider" id="slider">
+                    <a href="Resep 10.html" class="recipe-card">
+                        <img src="resepsepuluh.jpg" alt="Nasi Gurih Cah Bakso Ikan Brokoli">
+                        Nasi Gurih Cah Bakso Ikan Brokoli
+                    </a>
+                </div>
+            </div>
+            <button class="slider-button next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    <script>
+        let index = 0;
+        const totalCards = document.querySelectorAll(".recipe-card").length;
+        const visibleCards = 4; // Menampilkan 4 card sekaligus
+        const slider = document.getElementById("slider");
+        const cardWidth = 220; // Lebar setiap card termasuk margin
+        
+        function moveSlide(step) {
+            index += step * visibleCards;
+            if (index < 0) {
+                index = totalCards - visibleCards;
+            } else if (index >= totalCards) {
+                index = 0;
+            }
+            slider.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+        
+    </script>
+    <div class="cards-section">
+        <h2>Kawal Pertumbuhan Anak Agar Optimal</h2>
+        <div class="cards">
+            <div class="card"><h4>Jadwal Imunisasi</h4></div>
+            <div class="card"><h4>Jadwal Posyandu</h4></div>
+            <div class="card"><h4>Grafik Pertumbuhan Anak</h4></div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 UPTD Puskesmas Air Itam - Cegah Stunting Sejak Dini</p>
+    </footer>
+</body>
+</html>

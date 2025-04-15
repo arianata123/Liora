@@ -1,0 +1,127 @@
+<style>
+    .recipe-slider-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .recipe-slider {
+        display: flex;
+        gap: 10px;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+    }
+    
+    .recipe-card {
+        flex: 1;
+        min-width: calc(25% - 10px); /* 4 kartu per baris dengan jarak */
+        text-align: center;
+    }
+    
+    .recipe-card img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .slider-button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+    
+    .prev {
+        left: 10px;
+    }
+    
+    .next {
+        right: 10px;
+    }
+</style>
+
+<h2>Resep MPASI</h2>
+<div class="recipe-slider-container">
+    <button class="slider-button prev" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="recipe-slider" id="slider">
+        <a href="Resep 1.html" class="recipe-card">
+            <img src="resepsatu.jpg" alt="Bubur Ikan Tenggiri">
+            Bubur Ikan Tenggiri
+        </a>
+        <a href="Resep 2.html" class="recipe-card">
+            <img src="resepdua.jpg" alt="Bubur Ikan Kakap tempe">
+            Bubur Ikan Kakap Tempe
+        </a>
+        <div class="recipe-card">
+            <img src="reseptiga.jpg" alt="Bubur Pepes Ikan Kembung">
+            Bubur Pepes Ikan Kembung
+        </div>
+        <div class="recipe-card">
+            <img src="resepempat.jpg" alt="Tim Cah Ikan Kembung">
+            Tim Cah Ikan Kembung
+        </div>
+        <div class="recipe-card">
+            <img src="reseplima.jpg" alt="Tim Ikan Tongkol">
+            Tim Ikan Tongkol
+        </div>
+        <div class="recipe-card">
+            <img src="resepenam.jpg" alt="Tim Kentang Telur">
+            Tim Kentang Telur
+        </div>
+        <div class="recipe-card">
+            <img src="reseptujuh.jpg" alt="Nasi Telur Campur">
+            Nasi Telur Campur
+        </div>
+        <div class="recipe-card">
+            <img src="resepdelapan.jpg" alt="Mie Goreng Telur Puyuh">
+            Mie Goreng Telur Puyuh
+        </div>
+        <div class="recipe-card">
+            <img src="resepsembilan.jpg" alt="Nasi Rendang Telur Tempe">
+            Nasi Rendang Telur Tempe
+        </div>
+        <div class="recipe-card">
+            <img src="resepsepuluh.jpg" alt="Nasi Gurih Cah Bakso Ikan Brokoli">
+            Nasi Gurih Cah Bakso Ikan Brokoli
+        </div>
+    </div>
+    <button class="slider-button next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    let index = 0;
+    const totalCards = document.querySelectorAll(".recipe-card").length;
+    const visibleCards = 4;
+    const slider = document.getElementById("slider");
+    
+    function moveSlide(step) {
+        index += step * visibleCards;
+        if (index < 0) {
+            index = totalCards - visibleCards;
+        } else if (index >= totalCards) {
+            index = 0;
+        }
+        slider.style.transform = `translateX(-${index * 100 / visibleCards}%)`;
+    }
+    
+    setInterval(() => moveSlide(1), 3000);
+</script>
+
+<div class="cards-section">
+    <h2>Kawal Pertumbuhan Anak Agar Optimal</h2>
+    <div class="cards">
+        <div class="card"><h4>Jadwal Imunisasi</h4></div>
+        <div class="card"><h4>Jadwal Posyandu</h4></div>
+        <div class="card"><h4>Grafik Pertumbuhan Anak</h4></div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2025 UPTD Puskesmas Air Itam - Cegah Stunting Sejak Dini</p>
+</footer>
